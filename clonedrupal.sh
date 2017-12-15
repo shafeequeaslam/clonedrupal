@@ -27,12 +27,12 @@ rm -rf /home/$2/$1-$2
 
 #Variables
 
-ORIGIN_SERVER=
-ORIGIN_SERVER_USER=
-ORIGIN_SERVER_KEY=
-ORIGIN_SERVER_SITES_LOCATION=
-ORIGIN_SERVER_DB_PASSWD=
-DESTINATION_SERVER_DB_PASSWD=
+ORIGIN_SERVER=[IP or Hostname]
+ORIGIN_SERVER_USER=[Normally root]
+ORIGIN_SERVER_KEY=[Exaxt path to pem file for server]
+ORIGIN_SERVER_SITES_LOCATION=[Exact path to where all the sites are plced, One directory back of doc root of sites]
+ORIGIN_SERVER_DB_PASSWD=[Origin server`s db password]
+DESTINATION_SERVER_DB_PASSWD=[Destinations server`s db password]
 
 ssh -i $ORIGIN_SERVER_KEY  $ORIGIN_SERVER_USER@$ORIGIN_SERVER << EOF
 	cd $ORIGIN_SERVER_SITE_LOCATION/$1
